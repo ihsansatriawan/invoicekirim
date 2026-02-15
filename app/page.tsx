@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import SocialProof from "@/components/SocialProof";
 import Pricing from "@/components/Pricing";
+import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Features />
       <SocialProof />
       <Pricing />
+      <CTA />
     </main>
   );
 }
