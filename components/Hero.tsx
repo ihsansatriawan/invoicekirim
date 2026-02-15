@@ -17,7 +17,10 @@ export default function Hero() {
             </p>
 
             <div className="pt-4">
-              <button className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105 shadow-lg">
+              <button
+                className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105 shadow-lg"
+                aria-label="Mulai menggunakan InvoiceKirim gratis"
+              >
                 Mulai Gratis — Tanpa Kartu Kredit
               </button>
               <p className="text-sm text-neutral-600 mt-3">

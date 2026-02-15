@@ -37,6 +37,7 @@ export default function Navbar() {
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="text-xl font-bold text-primary-600 hover:text-primary-700 transition-colors"
+              aria-label="InvoiceKirim home"
             >
               InvoiceKirim
             </button>
