@@ -17,8 +17,11 @@
 /.next/
 /out/
 
+
 # production
 /build
+
+/public/test-screenshots
 
 # misc
 .DS_Store
