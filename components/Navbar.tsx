@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || isMobileMenuOpen
           ? "bg-white shadow-md"
           : "bg-transparent"
       }`}
@@ -75,7 +75,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-neutral-700 hover:text-primary-600"
+              className="text-neutral-700 hover:text-primary-600 relative z-50"
               aria-label="Toggle menu"
             >
               <svg
@@ -99,29 +99,29 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-4">
-            <div className="flex flex-col space-y-3">
+          <div className="md:hidden bg-white border-t border-neutral-200 py-4">
+            <div className="flex flex-col space-y-1">
               <button
                 onClick={() => scrollToSection("fitur")}
-                className="text-neutral-700 hover:text-primary-600 text-left px-2 py-2 transition-colors"
+                className="text-neutral-700 hover:bg-neutral-100 hover:text-primary-600 text-left px-4 py-3 rounded-lg transition-colors"
               >
                 Fitur
               </button>
               <button
                 onClick={() => scrollToSection("harga")}
-                className="text-neutral-700 hover:text-primary-600 text-left px-2 py-2 transition-colors"
+                className="text-neutral-700 hover:bg-neutral-100 hover:text-primary-600 text-left px-4 py-3 rounded-lg transition-colors"
               >
                 Harga
               </button>
               <button
                 onClick={() => scrollToSection("login")}
-                className="text-neutral-700 hover:text-primary-600 text-left px-2 py-2 transition-colors"
+                className="text-neutral-700 hover:bg-neutral-100 hover:text-primary-600 text-left px-4 py-3 rounded-lg transition-colors"
               >
                 Login
               </button>
               <button
                 onClick={() => scrollToSection("cta")}
-                className="bg-primary-500 hover:bg-primary-600 text-white px-6 py-2 rounded-lg font-semibold text-center transition-all"
+                className="bg-primary-500 hover:bg-primary-600 text-white px-4 py-3 rounded-lg font-semibold text-center transition-all mt-2"
               >
                 Mulai Gratis
               </button>
